@@ -417,21 +417,26 @@ body.menu-open { overflow: hidden; }
 .vbtn {
   display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; padding: 0 .9rem;
   background: var(--paper); color: var(--ink); border: 2px solid var(--ink); border-radius: var(--radius);
-  font-weight: 700; font-size: .95rem; cursor: pointer;
+  font-weight: 700; font-size: .95rem; white-space: nowrap; cursor: pointer;
 }
-.vbtn:hover { background: var(--lime); }
-.vbtn svg { width: 18px; height: 18px; }
+.vbtn svg { width: 18px; height: 18px; flex: none; }
 .vbtn--big { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); padding: 0 1.3rem; min-height: 56px; font-family: var(--f-display); font-weight: 800; font-size: 1.15rem; letter-spacing: .06em; text-transform: uppercase; background: var(--lime); box-shadow: 4px 4px 0 var(--ink); }
-.vbtn--big:hover { background: var(--lime-deep); }
+@media (hover: hover) {
+  .vbtn:hover { background: var(--lime); }
+  .vbtn--big:hover { background: var(--lime-deep); }
+}
 .video-shell.is-playing .vbtn--big { display: none; }
 
-.clips { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.clip figcaption { font-size: .95rem; margin-top: .6rem; }
+.clips { display: grid; gap: 1.5rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.clip { margin: 0; }
+.clip figcaption { font-size: .95rem; margin-top: .75rem; }
 .clip .video-shell { box-shadow: 6px 6px 0 var(--cobalt); max-width: none; }
 .clip .vbtn--big { font-size: 1rem; min-height: 48px; padding: 0 1rem; }
 @media (max-width: 760px) {
-  .clips { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 70%; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter) 1rem; }
-  .clip { scroll-snap-align: start; }
+  /* Phones: one large clip per row instead of a cramped side-scroll. */
+  .clips { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; justify-items: center; }
+  .clip { width: 100%; max-width: 380px; }
+  .clip figcaption { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 1.15rem; }
 }
 
 .gallery { display: grid; gap: .75rem; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 70px; }
