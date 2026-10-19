@@ -78,9 +78,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   letter-spacing: .16em; text-transform: uppercase; color: var(--cobalt);
   margin-bottom: 1.1rem;
 }
-.eyebrow::before { content: ""; width: 26px; height: 8px; background: var(--lime); border: 2px solid var(--ink); }
 .on-cobalt .eyebrow { color: var(--lime); }
-.on-cobalt .eyebrow::before { border-color: var(--lime); background: transparent; }
 .lede { font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.55; max-width: 34em; }
 .muted { color: var(--muted); }
 .mark { background: linear-gradient(transparent 58%, var(--lime) 58%, var(--lime) 92%, transparent 92%); padding: 0 .08em; }
@@ -139,10 +137,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .header-inner { display: flex; align-items: center; gap: 1.5rem; height: var(--header-h); }
 .brand {
-  display: block; flex: none; height: 52px; background: var(--cobalt);
-  border: 2px solid var(--ink); border-radius: var(--radius); overflow: hidden;
+  display: block; flex: none; height: 52px;
 }
-.brand img { height: 100%; width: auto; aspect-ratio: 900 / 392; object-fit: cover; }
+.brand img { height: 100%; width: auto; aspect-ratio: 813 / 338; }
 .main-nav { margin-left: auto; }
 .main-nav ul { display: flex; gap: .3rem; list-style: none; margin: 0; padding: 0; }
 .main-nav a {
@@ -474,9 +471,6 @@ body.menu-open { overflow: hidden; }
 .quotes { display: grid; gap: 1.5rem; }
 @media (min-width: 900px) { .quotes { grid-template-columns: 1.15fr .85fr; align-items: start; } .quotes .quote:nth-child(2) { margin-top: 4rem; } }
 .quote { margin: 0; background: #fff; border: 2px solid var(--ink); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.25rem); position: relative; }
-.quote::before {
-  content: ""; position: absolute; top: -2px; left: 1.4rem; width: 46px; height: 12px; background: var(--lime); border: 2px solid var(--ink); border-top: 0;
-}
 .quote p { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.4; font-weight: 500; margin-bottom: .8rem; }
 .quote .translation { font-size: 1rem; color: var(--muted); font-weight: 400; }
 .quote footer { font-family: var(--f-display); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--cobalt); }
@@ -563,7 +557,7 @@ body.menu-open { overflow: hidden; }
 .site-footer { background: var(--ink); color: rgba(255,255,255,.88); padding-block: clamp(3rem, 6vw, 4.5rem) 1.5rem; }
 .footer-grid { display: grid; gap: 2rem; }
 @media (min-width: 800px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; } }
-.footer-brand img { width: 220px; height: auto; border: 2px solid rgba(255,255,255,.5); border-radius: var(--radius); }
+.footer-brand img { width: 220px; height: auto; }
 .footer-brand p { margin-top: 1rem; max-width: 22em; }
 .site-footer h2 { font-family: var(--f-display); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 1rem; color: var(--lime); margin-bottom: .8rem; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
