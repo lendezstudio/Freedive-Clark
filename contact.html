@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask About a Session | Freedive Clark</title>
+  <meta name="description" content="Tell Freedive Clark your preferred date and group size. Prepare your message here, then send it in our chat and we'll confirm availability and booking details.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ask About a Session | Freedive Clark">
+  <meta property="og:description" content="Tell Freedive Clark your preferred date and group size. Prepare your message here, then send it in our chat and we'll confirm availability and booking details.">
+  <meta property="og:image" content="assets/img/group-poolside.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#024395">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Freedive Clark home">
+        <img src="assets/img/logo-wordmark.jpg" alt="Freedive Clark, City Dive Adventure" width="900" height="392">
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="experience.html">The Experience</a></li>
+          <li><a href="questions.html">Questions</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--small header-cta" href="contact.html" aria-current="page">Ask About a Session</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu"><span class="bars" aria-hidden="true"></span><span class="label">Menu</span></button>
+    </div>
+  </header>
+  <div class="menu-sheet" id="menu-sheet">
+    <nav aria-label="Mobile">
+      <ol>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="experience.html">The Experience</a></li>
+        <li><a href="questions.html">Questions</a></li>
+      </ol>
+    </nav>
+    <a class="btn" href="contact.html">Ask About a Session</a>
+  </div>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="eyebrow">Your next step</p>
+          <h1 class="h1" id="page-title">Let's plan your session.</h1>
+        </div>
+        <ol class="steps steps--light">
+          <li class="step"><div><h3>Choose your preferred date.</h3><p>Take a look at the class and tell us when you'd like to join.</p></div></li>
+          <li class="step"><div><h3>Send the details.</h3><p>Share your name, preferred date and number of participants. Add any questions you have about the class.</p></div></li>
+          <li class="step"><div><h3>Confirm with Freedive Clark.</h3><p>We'll discuss availability and send the payment instructions. Your place is confirmed once we've completed the booking arrangements with you.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section on-cobalt" id="inquiry" aria-labelledby="inq-title">
+      <div class="wrap inquiry">
+        <div>
+          <p class="eyebrow">Let's talk</p>
+          <h2 class="h2" id="inq-title">Got a date in mind?</h2>
+          <p class="lede" style="margin-top:1.2rem">Tell us when you'd like to join and how many of you are coming. We'll help you with the details.</p>
+          <p class="muted">This is an inquiry, not a confirmed reservation. We'll confirm availability and the booking arrangements with you.</p>
+
+          <div class="direct">
+            <h3>Prefer to message us directly?</h3>
+            <p class="muted">Ask us about the class, upcoming dates or booking details.</p>
+            <a class="btn btn--paper" href="https://ig.me/m/freediveclark" target="_blank" rel="noopener">Message Freedive Clark</a>
+            <p class="muted" style="margin-top:.8rem;font-size:.95rem">Opens our Instagram chat in a new tab.</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="inquiry-form" novalidate>
+            <div class="form-summary-error" id="form-errors" role="alert"></div>
+
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <p class="error" id="e-name">Please enter your name.</p>
+            </div>
+
+            <div class="field">
+              <label for="f-class">Class</label>
+              <select id="f-class" name="class">
+                <option value="intro">Introduction to Freediving (pool class)</option>
+                <option value="yacht">Sunset Yacht Dive (Mabini, Batangas)</option>
+                <option value="fundive">Fundive All-In Package (Mabini, Batangas)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-session">Preferred date</label>
+              <span class="hint" id="h-date">Choose a posted session or tell us your preferred date in your message.</span>
+              <select id="f-session" name="session" aria-describedby="h-date">
+                <option value="custom">My preferred date (choose below)</option>
+              </select>
+            </div>
+
+            <div class="field" id="date-wrap">
+              <label for="f-date">Your preferred day</label>
+              <input id="f-date" name="date" type="date" aria-describedby="e-date">
+              <p class="error" id="e-date">Please choose a future date or select a posted session.</p>
+            </div>
+
+            <div class="field">
+              <label for="f-count">Number of participants</label>
+              <input id="f-count" name="participants" type="number" inputmode="numeric" min="1" max="50" value="1" required aria-describedby="e-count">
+              <p class="error" id="e-count">Please enter at least one participant.</p>
+            </div>
+
+            <div class="field">
+              <label for="f-question">Your question (optional)</label>
+              <textarea id="f-question" name="question" rows="4"></textarea>
+            </div>
+
+            <button class="btn btn--cobalt" type="submit" style="width:100%">Prepare My Message</button>
+            <p class="booking-note">Nothing is sent from this page. You'll review your message, then send it yourself in our chat.</p>
+          </form>
+
+          <div class="review" id="review" aria-live="polite">
+            <h3>Your message is ready to review.</h3>
+            <p>Copy the message below, then open our chat and send it. Your request won't be sent automatically.</p>
+            <label class="visually-hidden" for="message-out">Your prepared message</label>
+            <textarea id="message-out" readonly></textarea>
+            <div class="btn-row">
+              <button class="btn btn--small" type="button" id="copy-msg">Copy Message</button>
+              <a class="btn btn--small btn--cobalt" id="open-chat" href="https://ig.me/m/freediveclark" target="_blank" rel="noopener">Open Chat</a>
+              <button class="btn btn--small btn--paper" type="button" id="edit-msg">Edit Details</button>
+            </div>
+            <p class="status" id="copy-status" role="status"></p>
+            <p class="booking-note">Open Chat opens Freedive Clark on Instagram in a new tab. This is an inquiry, not a confirmed reservation. We'll confirm availability and the booking arrangements with you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="wrap closing-grid">
+        <div>
+          <p class="eyebrow">Before you message us</p>
+          <h2 class="h2" id="more-title">Want a few answers first?</h2>
+        </div>
+        <div>
+          <p class="lede">Check the practical questions on fees, gear, trips and pickups.</p>
+          <a class="btn" href="questions.html">See the Questions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo-wordmark.jpg" alt="Freedive Clark" width="900" height="392" loading="lazy">
+          <p>Introductory pool freediving and fun dive trips.</p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="classes.html">Class</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="questions.html">Questions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Follow</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/freediveclark/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>&copy; 2026 Freedive Clark</span>
+        <span>Designed by <a href="https://lendezstudio.com/" target="_blank" rel="noopener">Lendez Studio</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

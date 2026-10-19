@@ -1,0 +1,10 @@
+# Client originals and internal documents, not part of the published site
+Initial Assets/
+*.docx
+*.pdf
+Logo.jpg
+CONTENT-TO-CONFIRM.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
